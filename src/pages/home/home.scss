@@ -1,0 +1,78 @@
+.welcome_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .intro_sub {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    * {
+      margin: 10px 0;
+    }
+
+    .intro_title {
+      font-size: 70px;
+      font-weight: bolder;
+    }
+
+    .knowMore_btn {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.3;
+      padding: 17px 36px 16px;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      background: var(--bs-lime);
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
+
+.howWeWork_section {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content-items {
+    display: flex;
+    max-width: 50%;
+
+    .content-img {
+      display: flex;
+      justify-content: center;
+    }
+
+    .content-title {
+      display: flex;
+      justify-content: center;
+      margin: 25px 0;
+      font-size: 27px;
+    }
+
+    .content-sub {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.features_section {
+  .ant-collapse-item {
+    color: white !important;
+  }
+}
+
+.service_section {
+  background-color: var(--bs-primary);
+  background-image: url("public/solution-bg-1.png");
+  background-size: auto;
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 700px;
+}
