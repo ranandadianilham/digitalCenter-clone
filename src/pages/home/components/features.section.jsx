@@ -1,162 +1,89 @@
 import React from "react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from "@chakra-ui/react";
-import { Box } from "@chakra-ui/core";
-import { MinusIcon, PlusIcon, RightArrowIcon } from "../../../components/icons";
-
+import { motion } from "framer-motion";
 const FeaturesSection = () => {
   return (
-    <div className="features_section bg-black w-full text-white py-10">
-      <div className="w-[80%] mx-auto">
-        <div className="rounded-2xl bg-slate-800 border border-white text-white w-fit p-2">
-          <p>Expertise</p>
-        </div>
-        <div className="flex justify-between w-full gap-20">
-          <div className="w-[30%]">
-            <div>
-              <p
-                className="roboto-bold"
-                style={{
-                  fontSize: "35px",
-                }}
-              >
-                With more than 3+ years of experience, our team has become
-                expert in digital Transformations.
-              </p>
-            </div>
-            <div>
-              <p className="roboto-bold text-gray-300">
-                Grow brands through bold, strategic creative
-              </p>
-            </div>
-            <div className="w-fit">
-              <a href="#" className="flex gap-1">
-                <span>Know More</span>{" "}
-                <span>
-                  <RightArrowIcon />
-                </span>
-              </a>
-              <div className="border-t border-white"></div>
-            </div>
+    <motion.div
+      initial={{opacity: 0, }}
+      whileInView={{  opacity: 1 }}
+      transition={{ duration: 1, repeat: 0 }}
+      className="flex flex-col bg-gray-100"
+    >
+      <div className=" mt-16 px-72  grid grid-cols-2">
+        <div>
+          <div className="rounded-2xl bg-white-800 border-2 border-black text-black w-fit p-2 mb-10">
+            <p>Features</p>
           </div>
-          <div className="w-[50%] roboto-bold">
-            <Accordion allowToggle>
-              <AccordionItem className="mb-5 accordion-item">
-                {({ isExpanded }) => (
-                  <>
-                    <h2>
-                      <AccordionButton>
-                        <Box as="span" flex="1" textAlign="left">
-                          Empowering Professional Excellence through
-                          Transformative Design
-                        </Box>
-                        {isExpanded ? (
-                          <MinusIcon fontSize="12px" />
-                        ) : (
-                          <PlusIcon fontSize="12px" />
-                        )}
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      <p className="text-gray-400 mt-10">
-                        stands at the intersection of innovation and
-                        professionalism, shaping the future of business
-                        operations through <span className="text-white">transformative design.</span>
-                      </p>
-                    </AccordionPanel>
-                  </>
-                )}
-              </AccordionItem>
-              <AccordionItem className="mb-5">
-                {({ isExpanded }) => (
-                  <>
-                    <h2>
-                      <AccordionButton>
-                        <Box as="span" flex="1" textAlign="left">
-                          Refining Workflows with Aesthetic Functionality
-                        </Box>
-                        {isExpanded ? (
-                          <MinusIcon fontSize="12px" />
-                        ) : (
-                          <PlusIcon fontSize="12px" />
-                        )}
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      <p className="text-gray-400 mt-10">
-                        with an acute understanding of professional demands, we
-                        create solutions that streamline{" "}
-                        <span className="text-white">
-                          operations, foster productivity, and redefine the
-                          elegance of efficiency.
-                        </span>
-                      </p>
-                    </AccordionPanel>
-                  </>
-                )}
-              </AccordionItem>
-              <AccordionItem className="mb-5">
-                {({ isExpanded }) => (
-                  <>
-                    <h2>
-                      <AccordionButton>
-                        <Box as="span" flex="1" textAlign="left">
-                          Architecting Digital Elegance, Advancing
-                          Professionalism
-                        </Box>
-                        {isExpanded ? (
-                          <MinusIcon fontSize="12px" />
-                        ) : (
-                          <PlusIcon fontSize="12px" />
-                        )}
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      <p className="text-gray-400 mt-10">
-                        Our ethos is founded on crafting digital experiences
-                        that embody{" "}
-                        <span  className="text-white">elegance and advance professionalism. </span>
-                      </p>
-                    </AccordionPanel>
-                  </>
-                )}
-              </AccordionItem>
-              <AccordionItem>
-                {({ isExpanded }) => (
-                  <>
-                    <h2>
-                      <AccordionButton>
-                        <Box as="span" flex="1" textAlign="left">
-                          Engineering Precision, Designing Success
-                        </Box>
-                        {isExpanded ? (
-                          <MinusIcon fontSize="12px" />
-                        ) : (
-                          <PlusIcon fontSize="12px" />
-                        )}
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      <p className="text-gray-400 mt-10">
-                        We believe that through expertly engineered design, we
-                        can transform everyday business tasks into seamless,
-                        successful outcomes, ensuring that professionalism is
-                        not just <span  className="text-white"> maintained but enhanced.</span>
-                      </p>
-                    </AccordionPanel>
-                  </>
-                )}
-              </AccordionItem>
-            </Accordion>
+          <div
+            className="roboto-medium"
+            style={{
+              fontSize: "46px",
+            }}
+          >
+            We execute projects utilizing our specialized and strategic approach
+          </div>
+        </div>
+        <div className="bg-gray-900 text-gray-500 py-5 flex flex-col gap-5 roboto-medium ">
+          <div className="pl-24 text-xl roboto-black">GIVING THE BEST</div>
+          <div className="pr-96 pl-10 pb-20">
+            <p
+              className="mb-10 roboto-bold"
+              style={{
+                fontSize: "18px",
+              }}
+            >
+              We are perpetually innovating for the future, meticulously
+              crafting the ensuing generation of products, brands, and design
+              attributes from a multifaceted and hybrid viewpoint.{" "}
+              <span className="text-gray-200">
+                This approach ensures that our creations are not only current
+                but also forward-thinking.
+              </span>
+            </p>
+            <p>
+              positioning them at the forefront of industry advancements and
+              technological progress.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+      <div className="grid grid-cols-2 px-72 mb-16 min-h-[500px]">
+        <div className="relative">
+          <img
+            className="absolute bottom-0 left-10"
+            src="feature-1.jpg"
+            width={700}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-4 ml-40">
+          <motion.div
+            initial={{ y: 200, opacity: 0, scale: 0 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, repeat: 0 , delay: 1}}
+            className="my-auto flex gap-5 flex-col"
+          >
+            <img className="w-fit" src="icon-1-1.png" />
+            <p className="roboto-bold">Innovative & Up To Date</p>
+            <p>
+              signifies a commitment to pioneering the latest technological
+              advancements and trends.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ y: 200, opacity: 0, scale: 0 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 1.1, repeat: 0 }}
+            className="my-auto flex gap-5 flex-col"
+          >
+            <img className="w-fit" src="icon-2-1.png" />
+            <p className="roboto-bold">Seamless Experience</p>
+            <p>
+              This commitment is pivotal in cultivating a sense of reliability
+              and trust with clients.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 

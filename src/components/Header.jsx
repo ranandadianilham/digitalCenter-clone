@@ -13,46 +13,51 @@ const Header = () => {
         </div>
       </div>
       <div className="nav-links">
-        <div
+        <a
           className="roboto-medium"
           style={{
             fontSize: "23px",
           }}
+          href="#"
         >
           Digital Service
-        </div>
-        <div
+        </a>
+        <a
           className="roboto-medium"
           style={{
             fontSize: "23px",
           }}
+          href="#"
         >
           Case Study
-        </div>
-        <div
+        </a>
+        <a
           className="roboto-medium"
           style={{
             fontSize: "23px",
           }}
+          href="#"
         >
           Company
-        </div>
-        <div
+        </a>
+        <a
           className="roboto-medium"
           style={{
             fontSize: "23px",
           }}
+          href="#"
         >
           Blog
-        </div>
-        <div
+        </a>
+        <a
           className="roboto-medium"
           style={{
             fontSize: "23px",
           }}
+          href="#"
         >
           Others
-        </div>
+        </a>
       </div>
       <div className="">
         <MenuIcon />

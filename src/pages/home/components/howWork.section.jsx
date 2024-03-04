@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useScroll } from "framer-motion";
 
 const HowWorkSection = () => {
   const contents = [
@@ -22,7 +23,12 @@ const HowWorkSection = () => {
     },
   ];
   return (
-    <div className="howWeWork_section">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      className="howWeWork_section my-10"
+    >
       <div
         style={{
           borderRadius: "20px",
@@ -41,23 +47,33 @@ const HowWorkSection = () => {
       >
         How We Work
       </div>
-      <div className="roboto-medium">
+      <div className="roboto-medium mb-10">
         Find out how the digital center can help you work together.
       </div>
-      <div className="content-items">
+      <motion.div
+        className="content-items"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         {contents.map((item, i) => {
           return (
-            <div key={item.title + "-" + i + "-" + item.title}>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2, delay: 0.5 + i }}
+              key={item.title + "-" + i + "-" + item.title}
+            >
               <div className="content-img">
                 <img src={item.img} />
               </div>
               <div className="content-title roboto-black">{item.title}</div>
               <div className="content-sub roboto-medium">{item.subtitle}</div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
