@@ -6,7 +6,7 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/react";
 import { MinusIcon, PlusIcon, RightArrowIcon } from "../../../components/icons";
 import { motion } from "framer-motion";
 const ExpertiseSection = () => {
